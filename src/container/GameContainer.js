@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Grid from './component/Grid.js'
-import './App.css';
+import Grid from '../component/Grid.js'
 
 class Game extends React.Component{
   constructor(props){
