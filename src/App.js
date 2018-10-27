@@ -1,44 +1,6 @@
 import React, { Component } from 'react';
+import Grid from './component/Grid.js'
 import './App.css';
-
-function GridCell(props){
-  var style = {
-    width: 20,
-    height: 20,
-    border: '1px solid black',
-    backgroundColor: props.cell
-  }
-  return (
-    <div style={style}></div>
-  )
-}
-
-function GridRow(props){
-  var style = {
-    display: "flex"
-  }
-  return(
-    <div style={style}>
-      {
-        props.row.map( (cell) => {
-          return <GridCell cell={cell}/>
-        })
-      }
-    </div>
-  )
-}
-
-function Grid(props){
-  return(
-    <div>
-      {
-        props.grid.map( (row) => {
-          return <GridRow row={row}/>
-        })
-      }
-    </div>
-  )
-}
 
 class Game extends React.Component{
   constructor(props){
@@ -60,7 +22,6 @@ class Game extends React.Component{
       { position: 22, height: 3, upright: false },
       { position: 26, height: 8, upright: true },
       { position: 29, height: 2, upright: false }
-
     ]
     grid[bird.height][bird.position] = 'yellow'
     this.state = {
